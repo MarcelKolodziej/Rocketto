@@ -42,6 +42,7 @@ public class Rocket : MonoBehaviour
 
     private void TurnRocket()
     {
+        rigidBody.freezeRotation = true; // take manual control of rotation
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(-Vector3.forward);
@@ -50,5 +51,6 @@ public class Rocket : MonoBehaviour
         {
             transform.Rotate(Vector3.forward);
         }
+        rigidBody.freezeRotation = false;
     }
 }
