@@ -433,7 +433,7 @@ PrefabInstance:
     - target: {fileID: 2492137075185315161, guid: bd92f0afb2274e44f9224b14cd72c240,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 7.8765
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd92f0afb2274e44f9224b14cd72c240, type: 3}
@@ -641,6 +641,11 @@ PrefabInstance:
         type: 3}
       propertyPath: BypassEffects
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758884184232042223, guid: 3310985995b39da438dabe28f37eabf5,
+        type: 3}
+      propertyPath: rcsThrust
+      value: 200.3
       objectReference: {fileID: 0}
     - target: {fileID: 4758884184851630788, guid: 3310985995b39da438dabe28f37eabf5,
         type: 3}
