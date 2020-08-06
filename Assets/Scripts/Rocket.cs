@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -34,13 +35,15 @@ public class Rocket : MonoBehaviour
                 Debug.Log("Friendly");
                 break;
             case "Hazards":
-                Debug.Log("Hazards"); // ToDo kill the player
+                Debug.Log("Hazards");
+                SceneManager.LoadScene(current.Scene);
                 break;
             case "Fuel":
                 Debug.Log("Fuel");
                 break;
             case "Finish_Pad":
-                Debug.Log("You won the game!"); // ToDo won the game anim
+                Debug.Log("You won the game!"); 
+                SceneManager.LoadScene(1);
                 break;
             default:
                 Debug.Log("Default");
