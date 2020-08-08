@@ -12,6 +12,8 @@ public class Rocket : MonoBehaviour
     Rigidbody rigidBody;
     AudioSource audioSource;
 
+    enum State {Alive,Crash, Win, Transcending }
+    State state = State.Alive; 
 
     // Start is called before the first frame update
     void Start()
@@ -23,36 +25,51 @@ public class Rocket : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Thrust();
-        Rotate();
+        if (state == State.Alive) 
+        {
+            Thrust();
+            Rotate();
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        switch(collision.gameObject.tag)
-        {
-            case "Friendly":
-                Debug.Log("Friendly");
-                break;
-            case "Hazards":
-                Debug.Log("Hazards");
-                SceneManager.LoadScene(current.Scene);
-                break;
-            case "Fuel":
-                Debug.Log("Fuel");
-                break;
-            case "Finish_Pad":
-                Debug.Log("You won the game!"); 
-                SceneManager.LoadScene(1);
-                break;
-            default:
-                Debug.Log("Default");
-                break;
-        }
+        if (state != State.Alive) { return; }  // ignore collisions when dead
+          
+        switch (collision.gameObject.tag)
+            {
+                case "Friendly":
+                    Debug.Log("Friendly");
+                    break;
+                case "Hazards":
+                    state = State.Crash;
+                    Invoke("LoadFirstLevel", 1.0f);
+                    break;
+                case "Finish_Pad":
+                    state = State.Win;
+                    Invoke("LoadNextScene", 1.0f);
+                    break;
+                case "Fuel":
+                    Debug.Log("Fuel");
+                    break;
+                default:
+                    Debug.Log("Default");
+                    break;
+            }
+        
+    }
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    private void LoadFirstLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Thrust()
-    {
+    {   
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(Vector3.up * shipThrust * Time.deltaTime);
@@ -62,10 +79,10 @@ public class Rocket : MonoBehaviour
                 audioSource.Play();
             }
         }
-        else
-        {
-            audioSource.Stop();
-        }
+            else
+            {
+                audioSource.Stop();
+            }
     }
 
     private void Rotate()
