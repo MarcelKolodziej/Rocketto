@@ -7,16 +7,12 @@ public class Rocket : MonoBehaviour
 {
     // ship control
     [SerializeField] float rcsThrust = 100f;
-    [SerializeField] float rocketThrust = 140f;
+    [SerializeField] float shipThrust = 140f;
 
     // Sounds 
     [SerializeField] AudioClip ThrustSound;
     [SerializeField] AudioClip DeadSound;
     [SerializeField] AudioClip LoadSound;
-
-    [SerializeField] ParticleSystem ParticleEngine;
-    [SerializeField] ParticleSystem ParticleDead;
-    [SerializeField] ParticleSystem ParticleWin;
 
     Rigidbody rigidBody;
     AudioSource audioSource;
@@ -50,13 +46,19 @@ public class Rocket : MonoBehaviour
                 case "Friendly":
                     Debug.Log("Friendly");
                     break;
-            case "Hazards":
-                CrashState();
+                case "Hazards":
+                    state = State.Crash;
+                    Invoke("LoadFirstLevel", 1.0f);
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(DeadSound);
                 break;
-            case "Finish_Pad":
-                FinishLevelState();
+                case "Finish_Pad":
+                    state = State.Win;
+                    Invoke("LoadNextScene", 1.0f);
+                    audioSource.Stop();
+                    audioSource.PlayOneShot(LoadSound);
                 break;
-            case "Fuel":
+                case "Fuel":
                     Debug.Log("Fuel");
                     break;
                 default:
@@ -64,25 +66,6 @@ public class Rocket : MonoBehaviour
                     break;
             }
     }
-
-    private void FinishLevelState()
-    {
-        state = State.Win;
-        Invoke("LoadNextScene", 1.0f);
-        audioSource.Stop();
-        audioSource.PlayOneShot(LoadSound);
-        ParticleWin.Play();
-    }
-
-    private void CrashState()
-    {
-        state = State.Crash;
-        Invoke("LoadFirstLevel", 1.0f);
-        audioSource.Stop();
-        audioSource.PlayOneShot(DeadSound);
-        ParticleDead.Play();
-    }
-
     private void LoadNextScene()
     {
         SceneManager.LoadScene(1);
@@ -102,19 +85,17 @@ public class Rocket : MonoBehaviour
         else
             {
                 audioSource.Stop();
-                ParticleEngine.Stop();
             }
     }
 
     private void AddThrust()
     {
-        rigidBody.AddRelativeForce(Vector3.up * rocketThrust * Time.deltaTime);
+        rigidBody.AddRelativeForce(Vector3.up * shipThrust * Time.deltaTime);
 
         if (!audioSource.isPlaying) // so it doesn't layer
         {
             audioSource.PlayOneShot(ThrustSound);
         }
-        ParticleEngine.Play();
     }
 
     private void ApplyRotationInput()
