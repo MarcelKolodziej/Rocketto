@@ -2276,56 +2276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4758884184232042220, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042220, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042220, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_Drag
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042222, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1e2fb308a0c55ad498e8674fd2cde80d, type: 3}
-    - target: {fileID: 4758884184232042222, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042222, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042222, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: BypassEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042223, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: rcsThrust
-      value: 200.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184232042223, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: shipThrust
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758884184851630788, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.11
-      objectReference: {fileID: 0}
     - target: {fileID: 8049519988611580293, guid: 3310985995b39da438dabe28f37eabf5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2385,26 +2335,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049519989340301091, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8500004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049519989707761446, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.8500004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049519989946178409, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5684396
-      objectReference: {fileID: 0}
-    - target: {fileID: 8049519989946178409, guid: 3310985995b39da438dabe28f37eabf5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.80999947
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3310985995b39da438dabe28f37eabf5, type: 3}
