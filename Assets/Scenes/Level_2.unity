@@ -502,12 +502,12 @@ PrefabInstance:
     - target: {fileID: 6045301153663617329, guid: bafbb00cc750e044d85a50e314b75ad6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.74
+      value: -19.65
       objectReference: {fileID: 0}
     - target: {fileID: 6045301153663617329, guid: bafbb00cc750e044d85a50e314b75ad6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.34
+      value: 22.03
       objectReference: {fileID: 0}
     - target: {fileID: 6045301153663617329, guid: bafbb00cc750e044d85a50e314b75ad6,
         type: 3}
@@ -2540,6 +2540,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1597654693, guid: 3310985995b39da438dabe28f37eabf5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597654694, guid: 3310985995b39da438dabe28f37eabf5, type: 3}
+      propertyPath: m_SpotAngle
+      value: 36.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597654694, guid: 3310985995b39da438dabe28f37eabf5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1597654694, guid: 3310985995b39da438dabe28f37eabf5, type: 3}
+      propertyPath: m_Intensity
+      value: 69.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4758884184232042220, guid: 3310985995b39da438dabe28f37eabf5,
         type: 3}
       propertyPath: m_Mass
@@ -2574,6 +2590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: BypassEffects
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4758884184232042222, guid: 3310985995b39da438dabe28f37eabf5,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 395200.25
       objectReference: {fileID: 0}
     - target: {fileID: 4758884184232042223, guid: 3310985995b39da438dabe28f37eabf5,
         type: 3}
