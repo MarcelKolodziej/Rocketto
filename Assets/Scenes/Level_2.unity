@@ -23,11 +23,11 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 0.57
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.423
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.487
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3563402, g: 0.35776013, b: 0.3259633, a: 1}
+  m_Sun: {fileID: 924409606}
+  m_IndirectSpecularColor: {r: 0.24979293, g: 0.25084504, b: 0.22728437, a: 0.487}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -901,6 +901,16 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.44535422
       objectReference: {fileID: 0}
+    - target: {fileID: 5928906565311666540, guid: b40c56b11b7ee9d4080cb44d2efb454a,
+        type: 3}
+      propertyPath: m_DrawHalo
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5928906565311666540, guid: b40c56b11b7ee9d4080cb44d2efb454a,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.42
+      objectReference: {fileID: 0}
     - target: {fileID: 5928906565311666541, guid: b40c56b11b7ee9d4080cb44d2efb454a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -973,6 +983,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b40c56b11b7ee9d4080cb44d2efb454a, type: 3}
+--- !u!108 &924409606 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 5928906565311666540, guid: b40c56b11b7ee9d4080cb44d2efb454a,
+    type: 3}
+  m_PrefabInstance: {fileID: 924409605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1053575725
 PrefabInstance:
   m_ObjectHideFlags: 0
