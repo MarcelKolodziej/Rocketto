@@ -2429,6 +2429,11 @@ PrefabInstance:
       propertyPath: m_Type
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5928906565311666540, guid: b40c56b11b7ee9d4080cb44d2efb454a,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 5928906565311666541, guid: b40c56b11b7ee9d4080cb44d2efb454a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2611,7 +2616,7 @@ PrefabInstance:
     - target: {fileID: 6045301153663617329, guid: bafbb00cc750e044d85a50e314b75ad6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 57.8
+      value: 45.3
       objectReference: {fileID: 0}
     - target: {fileID: 6045301153663617329, guid: bafbb00cc750e044d85a50e314b75ad6,
         type: 3}
@@ -4940,7 +4945,7 @@ PrefabInstance:
     - target: {fileID: 2512814389768239138, guid: 78d0195aeba04724aa6da93bafbd8938,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.8
+      value: -22.3
       objectReference: {fileID: 0}
     - target: {fileID: 2512814389768239138, guid: 78d0195aeba04724aa6da93bafbd8938,
         type: 3}
@@ -5015,7 +5020,7 @@ PrefabInstance:
     - target: {fileID: 2512814389768239141, guid: 78d0195aeba04724aa6da93bafbd8938,
         type: 3}
       propertyPath: field of view
-      value: 58.309147
+      value: 65.2
       objectReference: {fileID: 0}
     - target: {fileID: 2512814389768239143, guid: 78d0195aeba04724aa6da93bafbd8938,
         type: 3}
@@ -5338,7 +5343,7 @@ PrefabInstance:
     - target: {fileID: 1498443630822240196, guid: 102775fecad129946b5d3651a4257fdd,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 266.53458
+      value: 389.96674
       objectReference: {fileID: 0}
     - target: {fileID: 8376605744274241420, guid: 102775fecad129946b5d3651a4257fdd,
         type: 3}
